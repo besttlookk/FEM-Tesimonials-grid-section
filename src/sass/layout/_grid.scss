@@ -1,0 +1,14 @@
+@use "../utils/" as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+
+  @include bp("large") {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rowss: repeat(2, 1fr);
+
+    gap: 1.6rem;
+  }
+}
